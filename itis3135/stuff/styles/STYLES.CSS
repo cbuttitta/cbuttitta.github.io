@@ -8,18 +8,32 @@ body{
     }
     @keyframes spin {
       from {
-        transform: rotate(0deg); /* Starting state: no rotation */
+        transform: rotate(0deg); 
       }
       to {
-        transform: rotate(360deg); /* Ending state: full rotation */
+        transform: rotate(360deg); 
+      }
+    }
+    @keyframes resize {
+      0% {
+        transform: scaleX(0) rotate(0deg); 
+      }
+      50% {
+        transform: scaleX(0.05) rotate(180deg); 
+      }
+      100% {
+        transform: scaleX(1) rotate(360deg); 
       }
     }
     #image{
         animation: spin 4s infinite linear;
     }
+    #paragraph{
+        animation: resize 4s infinite linear;
+    }
     #box{
-        border-top: 15px groove brown;
-        border-bottom: 15px groove black;
-        border-left: 13px groove brown;
-        border-right: 110px groove brown; 
+        border-top: 15px groove lightblue;
+        border-bottom: 15px groove green;
+        border-left: 13px groove orange;
+        border-right: 110px groove red; 
     }
