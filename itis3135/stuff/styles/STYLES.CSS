@@ -1,0 +1,25 @@
+body{
+        background-color: white;
+        color: black;
+        font-family: Comic Sans MS;
+    }
+    a{
+        color: blue;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg); /* Starting state: no rotation */
+      }
+      to {
+        transform: rotate(360deg); /* Ending state: full rotation */
+      }
+    }
+    #image{
+        animation: spin 4s infinite linear;
+    }
+    #box{
+        border-top: 15px groove brown;
+        border-bottom: 15px groove black;
+        border-left: 13px groove brown;
+        border-right: 110px groove brown; 
+    }

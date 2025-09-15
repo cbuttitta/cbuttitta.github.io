@@ -1,0 +1,67 @@
+<style>
+    body{
+        background-color: white;
+        color: black;
+        font-family: Comic Sans MS;
+    }
+    a{
+        color: blue;
+    }
+    @keyframes spin {
+      from {
+        transform: rotate(0deg); 
+      }
+      to {
+        transform: rotate(360deg); 
+      }
+    }
+    @keyframes resize {
+      0% {
+        transform: scaleX(0) rotate(0deg); 
+      }
+      50% {
+        transform: scaleX(0.05) rotate(180deg); 
+      }
+      100% {
+        transform: scaleX(1) rotate(360deg); 
+      }
+    }
+    #image{
+        animation: spin 4s infinite linear;
+    }
+    #paragraph{
+        animation: resize 4s infinite linear;
+    }
+    #box{
+        border-top: 15px groove lightblue;
+        border-bottom: 15px groove green;
+        border-left: 13px groove orange;
+        border-right: 110px groove red; 
+    }
+</style>
+<body>
+<heading>
+    <h2>fart</h2>
+    <br><br><br><br>
+</heading>
+<img id="image" src="https://pbs.twimg.com/media/GrZUMNzWQAATa2c?format=jpg&name=large" width="400" height="400" alt="cat"/>
+<center>
+    <h1 style="background-color: red; color: white;">Things: (important!)</h1>
+    <ul>
+        <li style="background-color: black; color: lightgreen;">greenbeans</li>
+        <li style="text-decoration: underline;"><em>☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺☺</em></li>
+        <br>
+        <br>
+        <li><a href="styles/STYLES.CSS">check out the css!</a></li>
+        <br>
+        <li><span id="box">🐄</span><-------Contained </li>
+    </ul>
+    <h4 style="font-family: 'Times New Roman';">let the following be know:</h4>
+    <p id="paragraph" style="font-size: 45px; font-family: Papyrus, fantasy;">
+        <b>Philippians 4:13</b> I have the strength for everything through him who empowers me.
+        <b>Ephesians 4:29</b> No foul language should come out of your mouths, but only such as is good for needed edification, that it may impart grace to those who hear.
+    </p>
+</center>
+<br>
+<br><br><br><br><br><br>
+</body>
