@@ -1,0 +1,41 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: beige;
+    color: black;
+    margin: auto;
+    max-width: 800px;
+    width: 100%;
+}
+h1, h2{
+    font-family: "Lucida Console", Arial;
+
+}
+p, li{
+    font-family: "Comic Sans MS", Arial;
+}
+li a{
+    color: green;
+    text-decoration: none;
+}
+a{
+    color: maroon;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+}
+a:visited{
+    color: brown;
+    text-decoration: none;
+}
+#intro-figure{
+    text-align: center;
+}
+#intro-caption{
+    font-style: italic;
+}
+img{
+ max-width: 50%;
+ height: auto;  
+}
