@@ -1,17 +1,17 @@
 body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: lightgreen;
+    background-color: lightyellow;
     color: black;
     margin: auto;
     max-width: 800px;
     width: 100%;
 }
 h1, h2{
-    font-family: "Lucida Console", Arial;
+    font-family: "Tahoma", Arial;
 
 }
 p, li{
-    font-family: "Comic Sans MS", Arial;
+    font-family: "Helvetica", Arial;
 }
 li a{
     color: green;
@@ -22,11 +22,11 @@ a{
     text-decoration: none;
 }
 a:hover{
-    color: purple;
+    color: red;
     text-decoration: none;
 }
 a:visited{
-    color: blue;
+    color: brown;
     text-decoration: none;
 }
 #intro-figure{
@@ -38,4 +38,8 @@ a:visited{
 img{
  max-width: 50%;
  height: auto;  
+}
+.separator-line {
+  border-bottom: 2px solid #ccc;
+  margin: 20px 0 0 0px; 
 }
