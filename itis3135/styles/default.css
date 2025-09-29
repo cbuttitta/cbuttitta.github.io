@@ -43,3 +43,22 @@ img{
   border-bottom: 2px solid #ccc;
   margin: 20px 0 0 0px; 
 }
+
+.outline-table {
+  width: 100%;                
+  border: 1px solid #222;     
+  border-collapse: collapse;  
+  border-spacing: 0;          
+  font-family: system-ui, Arial, sans-serif;
+  text-align: left;           
+}
+
+.outline-table th,
+.outline-table td {
+  border: 1px solid #222; 
+  padding: 8px;           
+}
+
+.outline-table thead th {
+  font-weight: 600;
+}
