@@ -14,7 +14,8 @@
             background-color: lightsteelblue;
             color: black;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            margin: 0 auto;
+            margin: 2;
+            cursor: wait;
         }
 
         h1 {
@@ -23,7 +24,7 @@
 
         a {
             text-decoration: none;
-            background-image: linear-gradient(to right,#EAEAEA, #893168, #4A1942);
+            background-image: linear-gradient(to right, #EAEAEA, #893168, #4A1942);
             -webkit-background-clip: text;
             background-clip: text;
             -webkit-text-fill-color: transparent;
@@ -31,6 +32,24 @@
 
         }
     </style>
+    <script>
+    const cursors = [
+  "auto", "default", "none", "context-menu", "help", "pointer", "progress", 
+  "wait", "cell", "crosshair", "text", "vertical-text", "alias", "copy", 
+  "move", "no-drop", "not-allowed", "grab", "grabbing", "all-scroll", 
+  "col-resize", "row-resize", "n-resize", "e-resize", "s-resize", "w-resize",
+  "ne-resize", "nw-resize", "se-resize", "sw-resize", "ew-resize", 
+  "ns-resize", "nesw-resize", "nwse-resize", "zoom-in", "zoom-out"
+];
+
+let i = 0;
+
+// Change cursor every 1 second
+setInterval(() => {
+  document.body.style.cursor = cursors[i];
+  i = (i + 1) % cursors.length; // loop back when reaching the end
+}, 100);    
+    </script>
     <header>
         <h1>My Hobby :)</h1>
     </header>
