@@ -22,7 +22,7 @@
             text-align: center;
         }
 
-        a {
+        #design-firm-link {
             text-decoration: none;
             background-image: linear-gradient(to right, #EAEAEA, #893168, #4A1942);
             -webkit-background-clip: text;
@@ -31,117 +31,174 @@
             color: transparent;
 
         }
-        #fish-image{
+
+        #fish-image {
             width: 20%;
             height: 20%;
         }
-        #lake-image{
+
+        #lake-image {
             width: 60%;
             height: 60%;
         }
-        #important{
+
+        #important {
             text-transform: uppercase;
+        }
+
+        nav a+a::before {
+            content: " ^ ";
+            /* Inserts a bullet point with spaces around it */
+            color: black;
+            margin-inline: 5px;
+            /* Adds horizontal margin */
+        }
+        nav a{
+            font-weight: bold;
+        }
+        nav{
+            text-align: center;
         }
     </style>
     <script>
-    const cursors = [
-  "auto", "default", "none", "context-menu", "help", "pointer", "progress", 
-  "wait", "cell", "crosshair", "text", "vertical-text", "alias", "copy", 
-  "move", "no-drop", "not-allowed", "grab", "grabbing", "all-scroll", 
-  "col-resize", "row-resize", "n-resize", "e-resize", "s-resize", "w-resize",
-  "ne-resize", "nw-resize", "se-resize", "sw-resize", "ew-resize", 
-  "ns-resize", "nesw-resize", "nwse-resize", "zoom-in", "zoom-out"
-];
+        const cursors = [
+            "auto", "default", "none", "context-menu", "help", "pointer", "progress",
+            "wait", "cell", "crosshair", "text", "vertical-text", "alias", "copy",
+            "move", "no-drop", "not-allowed", "grab", "grabbing", "all-scroll",
+            "col-resize", "row-resize", "n-resize", "e-resize", "s-resize", "w-resize",
+            "ne-resize", "nw-resize", "se-resize", "sw-resize", "ew-resize",
+            "ns-resize", "nesw-resize", "nwse-resize", "zoom-in", "zoom-out"
+        ];
 
-let i = 0;
+        let i = 0;
 
-// Change cursor every 1 second
-setInterval(() => {
-  document.body.style.cursor = cursors[i];
-  i = (i + 1) % cursors.length; // loop back when reaching the end
-}, 100);    
+        // Change cursor every 1 second
+        setInterval(() => {
+            document.body.style.cursor = cursors[i];
+            i = (i + 1) % cursors.length; // loop back when reaching the end
+        }, 100);    
     </script>
     <header>
         <h1>Fishing :)</h1>
+        <nav>
+            <a class="nav-link" data-target="section1"><span>Who</span></a>
+            <a class="nav-link" data-target="section2"><span>What</span></a>
+            <a class="nav-link" data-target="section3"><span>Where</span></a>
+        </nav>
     </header>
     <main>
-        <section>
-            <h2>Who:</h2>
-            <img id="fish-image" src="images/fish.gif" alt="fish">
-            <p>Me and the fish</p>
+        <details>
+            <summary>Who</summary>
+            <section>
+                <h2>Who:</h2>
+                <img id="fish-image" src="images/fish.gif" alt="fish">
+                <p>You and the fish</p>
+            </section>
+        </details>
+
+        <details>
+            <summary>What</summary>
+            <section>
+                <h2>What:</h2>
+                <p>Fishing is the activity of catching fish, either as a means of sustenance or for recreation. It
+                    involves various methods, including angling with a rod, line, and hook, using nets or traps, or
+                    spearing fish. Fishing is a prehistoric practice that provides food and employment for millions of
+                    people globally and is also a popular recreational activity</p>
+            </section>
+        </details>
+        <details>
+            <summary>When</summary>
+            <section>
+                <h2>When:</h2>
+                <p>The best time for fishing is typically early morning and late evening, as fish are more active in the
+                    lower light conditions of dawn and dusk. However, the ideal time can vary depending on factors like
+                    water temperature, weather, tides, and the specific species you are targeting. Midday can be
+                    productive when fish are seeking shade, and night fishing is also excellent for many species. </p>
+                <p>Personally, I like to fish whenever I so please.</p>
+            </section>
+        </details>
+        <details>
+            <summary>Where</summary>
+            <section>
+                <h2>Where: </h2>
+                <figure>
+                    <img id="lake-image" src="images/image.png" alt="lake">
+                    <p>Fish live in water, so fishing is doen near bodies of water like lakes, rivers, or oceans</p>
+                    <h4 id="important">Important: A good fishing spot is a personal secret and only you should know
+                        about it</h4>
+                </figure>
+        </details>
         </section>
-        <section>
-            <h2>What:</h2>
-            <p>Fishing is the activity of catching fish, either as a means of sustenance or for recreation. It involves various methods, including angling with a rod, line, and hook, using nets or traps, or spearing fish. Fishing is a prehistoric practice that provides food and employment for millions of people globally and is also a popular recreational activity</p>
-        </section>
-        <section>
-            <h2>When:</h2>
-            <p>The best time for fishing is typically early morning and late evening, as fish are more active in the lower light conditions of dawn and dusk. However, the ideal time can vary depending on factors like water temperature, weather, tides, and the specific species you are targeting. Midday can be productive when fish are seeking shade, and night fishing is also excellent for many species. </p>
-            <p>I like to fish whenever I so please.</p>
-        </section>
-        <section>
-            <h2>Where: </h2>
-            <figure>
-            <img id="lake-image" src="images/image.png" alt="lake">
-            <p>Fish live in water, so fishing is doen near bodies of water like lakes, rivers, or oceans</p>
-            <h4 id="important">Important: A good fishing spot is a personal secret and only you should know about it</h4>
-            </figure>
-        </section>
-        <section>
-            <h2>How</h2>
-            <p>To fish, first prepare your line by tying a hook, weights, and a bobber, then bait the hook. Next, find a good spot, cast your line, and wait patiently for a fish to bite the bait. When you feel a bite, quickly pull the rod tip up to set the hook and then reel your catch in slowly and steadily.</p>
-            <ol>
-                <li>
-                    Prepare Rod and Reel, Lures or Bait and Tools for Hook Extraction
-                </li>
-                <li>
-                    Have a fishing license (optional in my opinion)
-                </li>
-                <li>
-                    Find a fishing spot
-                </li>
-                <li>
-                    Set up your line with the bait or lure
-                </li>
-                <li>
-                    Cast your line
-                </li>
-                <li>
-                    Wait for a bite
-                </li>
-                <li>
-                    Pull up to set the hook and reel in, the fish will fight though
-                </li>
-                <li>
-                    Grab fish out of water, it will be mad
-                </li>
-                <li>
-                    Pull the hook out of the fish's mouth (it hurts the fish ☹)
-                </li>
-                <li>
-                    Take a picture with the fish to show how big it is
-                </li>
-                <li>
-                    Release the fish and let it swim away
-                </li>
-            </ol>
-        </section>
-        <section>
-            <h2>Why</h2>
-            <p>One should fish for recreation, as a healthy food source, to connect with nature, and to support conservation efforts. Fishing provides physical and mental health benefits, such as stress reduction and improved concentration, while also offering an opportunity to spend quality time with loved ones and gain a sustainable food source rich in protein and omega-3 fatty acids. </p>
-        </section>
-        <section>
-            <h2>AI Prompts I Used: </h2>
-            <ul>
-                <li>"What is fishing?"</li>
-                <li>"When is the best time for fishing?"</li>
-                <li>"How do you fish?"</li>
-                <li>"Why should one fish?"</li>
-            </ul>
-        </section>
+        <details>
+            <summary>How</summary>
+            <section>
+                <h2>How</h2>
+                <p>To fish, first prepare your line by tying a hook, weights, and a bobber, then bait the hook. Next,
+                    find a good spot, cast your line, and wait patiently for a fish to bite the bait. When you feel a
+                    bite, quickly pull the rod tip up to set the hook and then reel your catch in slowly and steadily.
+                </p>
+                <ol>
+                    <li>
+                        Prepare Rod and Reel, Lures or Bait and Tools for Hook Extraction
+                    </li>
+                    <li>
+                        Have a fishing license (optional in my opinion)
+                    </li>
+                    <li>
+                        Find a fishing spot
+                    </li>
+                    <li>
+                        Set up your line with the bait or lure
+                    </li>
+                    <li>
+                        Cast your line
+                    </li>
+                    <li>
+                        Wait for a bite
+                    </li>
+                    <li>
+                        Pull up to set the hook and reel in, the fish will fight though
+                    </li>
+                    <li>
+                        Grab fish out of water, it will be mad
+                    </li>
+                    <li>
+                        Pull the hook out of the fish's mouth (it hurts the fish ☹)
+                    </li>
+                    <li>
+                        Take a picture with the fish to show how big it is
+                    </li>
+                    <li>
+                        Release the fish and let it swim away
+                    </li>
+                </ol>
+            </section>
+        </details>
+        <details>
+            <section>
+                <summary>Why</summary>
+                <h2>Why</h2>
+                <p>One should fish for recreation, as a healthy food source, to connect with nature, and to support
+                    conservation efforts. Fishing provides physical and mental health benefits, such as stress reduction
+                    and improved concentration, while also offering an opportunity to spend quality time with loved ones
+                    and gain a sustainable food source rich in protein and omega-3 fatty acids. </p>
+            </section>
+        </details>
+        <details>
+            <section>
+                <summary>AI Prompts</summary>
+                <h2>AI Prompts I Used: </h2>
+                <ul>
+                    <li>"What is fishing?"</li>
+                    <li>"When is the best time for fishing?"</li>
+                    <li>"How do you fish?"</li>
+                    <li>"Why should one fish?"</li>
+                </ul>
+            </section>
+        </details>
     </main>
     <footer>
-        <a href="../cbdesigninc.co/index.html">Design Firm Website</a>
+        <a id="design-firm-link" href="../cbdesigninc.co/index.html">Design Firm Website</a>
     </footer>
 </body>
 
