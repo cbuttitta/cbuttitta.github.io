@@ -46,7 +46,7 @@
         }
 
         nav a+a::before {
-            content: " ^ ";
+            content: "-";
             /* Inserts a bullet point with spaces around it */
             color: black;
             margin-inline: 5px;
@@ -55,6 +55,7 @@
 
         nav a {
             font-weight: bold;
+            cursor: pointer;
         }
 
         nav {
@@ -63,7 +64,6 @@
 
         .content {
             display: none;
-            padding: 2em;
         }
 
         .content.visible {
@@ -89,19 +89,20 @@
         <h1>Fishing :)</h1>
         <nav>
             <a class="nav-link" data-target="who"><span>Who</span></a>
-                        <a class="nav-link" data-target="what"><span>What</span></a>
+            <a class="nav-link" data-target="what"><span>What</span></a>
             <a class="nav-link" data-target="when"><span>When</span></a>
             <a class="nav-link" data-target="where"><span>Where</span></a>
-                        <a class="nav-link" data-target="how"><span>How</span></a>
-                                    <a class="nav-link" data-target="why"><span>Why</span></a>
-                                                <a class="nav-link" data-target="ai-prompts"><span>AI Prompts</span></a>
+            <a class="nav-link" data-target="how"><span>How</span></a>
+            <a class="nav-link" data-target="why"><span>Why</span></a>
+            <a class="nav-link" data-target="ai-prompts"><span>AI Prompts</span></a>
         </nav>
     </header>
     <main>
-        <section id="who">
+        <section id="who" class="content">
             <h2>Who:</h2>
             <img id="fish-image" src="images/fish.gif" alt="fish">
             <p>You and the fish</p>
+        </section>
             <section class="content visible">
                 <h2>What:</h2>
                 <p>Fishing is the activity of catching fish, either as a means of sustenance or for recreation. It
