@@ -72,29 +72,6 @@
             display: block;
         }
     </style>
-    <script>
-        document.querySelectorAll('.nav-link').forEach(link => {
-            link.addEventListener('click', event => {
-                event.preventDefault(); // Prevent the page from jumping to the anchor
-                alert('clicked');
-
-                const targetId = link.getAttribute('data-target');
-                console.log(targetId);
-
-                // Hide all sections
-                document.querySelectorAll('.content').forEach(section => {
-                    section.classList.remove('visible');
-                });
-
-                // Show the selected section
-                document.getElementById(targetId).classList.add('visible');
-
-                // Optional: update the URL hash (so links/bookmarks work)
-                history.pushState(null, '', `#${targetId}`);
-            });
-        });
-
-    </script>
     <header>
         <h1>Fishing :)</h1>
         <nav>
@@ -113,14 +90,14 @@
             <img id="fish-image" src="images/fish.gif" alt="fish">
             <p>You and the fish</p>
         </section>
-        <section class="content visible">
+        <section id="what" class="content visible">
             <h2>What:</h2>
             <p>Fishing is the activity of catching fish, either as a means of sustenance or for recreation. It
                 involves various methods, including angling with a rod, line, and hook, using nets or traps, or
                 spearing fish. Fishing is a prehistoric practice that provides food and employment for millions of
                 people globally and is also a popular recreational activity</p>
         </section>
-        <section class="content">
+        <section id="when" class="content">
             <h2>When:</h2>
             <p>The best time for fishing is typically early morning and late evening, as fish are more active in the
                 lower light conditions of dawn and dusk. However, the ideal time can vary depending on factors like
@@ -128,7 +105,7 @@
                 productive when fish are seeking shade, and night fishing is also excellent for many species. </p>
             <p>Personally, I like to fish whenever I so please.</p>
         </section>
-        <section class="content">
+        <section id="where"  class="content">
             <h2>Where: </h2>
             <figure>
                 <img id="lake-image" src="images/image.png" alt="lake">
@@ -137,7 +114,7 @@
                     about it</h4>
             </figure>
         </section>
-        <section class="content">
+        <section  id="how"  class="content">
             <h2>How</h2>
             <p>To fish, first prepare your line by tying a hook, weights, and a bobber, then bait the hook. Next,
                 find a good spot, cast your line, and wait patiently for a fish to bite the bait. When you feel a
@@ -179,14 +156,14 @@
                 </li>
             </ol>
         </section>
-        <section class="content">
+        <section  id="why"  class="content">
             <h2>Why</h2>
             <p>One should fish for recreation, as a healthy food source, to connect with nature, and to support
                 conservation efforts. Fishing provides physical and mental health benefits, such as stress reduction
                 and improved concentration, while also offering an opportunity to spend quality time with loved ones
                 and gain a sustainable food source rich in protein and omega-3 fatty acids. </p>
         </section>
-        <section class="content">
+        <section  id="ai-prompts"  class="content">
             <h2>AI Prompts I Used: </h2>
             <ul>
                 <li>"What is fishing?"</li>
@@ -199,6 +176,28 @@
     <footer>
         <a id="design-firm-link" href="../cbdesigninc.co/index.html">Design Firm Website</a>
     </footer>
+        <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', event => {
+                event.preventDefault(); // Prevent the page from jumping to the anchor
+
+                const targetId = link.getAttribute('data-target');
+                console.log(targetId);
+
+                // Hide all sections
+                document.querySelectorAll('.content').forEach(section => {
+                    section.classList.remove('visible');
+                });
+
+                // Show the selected section
+                document.getElementById(targetId).classList.add('visible');
+
+                // Optional: update the URL hash (so links/bookmarks work)
+                history.pushState(null, '', `#${targetId}`);
+            });
+        });
+
+    </script>
 </body>
 
 </html>
