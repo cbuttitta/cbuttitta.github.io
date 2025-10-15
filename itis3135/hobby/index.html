@@ -15,7 +15,6 @@
             color: black;
             font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
             margin: 2;
-            cursor: wait;
         }
 
         h1 {
@@ -61,56 +60,56 @@
         nav {
             text-align: center;
         }
+
+        .content {
+            display: none;
+            padding: 2em;
+        }
+
+        .content.visible {
+            display: block;
+        }
     </style>
     <script>
-        const cursors = [
-            "auto", "default", "none", "context-menu", "help", "pointer", "progress",
-            "wait", "cell", "crosshair", "text", "vertical-text", "alias", "copy",
-            "move", "no-drop", "not-allowed", "grab", "grabbing", "all-scroll",
-            "col-resize", "row-resize", "n-resize", "e-resize", "s-resize", "w-resize",
-            "ne-resize", "nw-resize", "se-resize", "sw-resize", "ew-resize",
-            "ns-resize", "nesw-resize", "nwse-resize", "zoom-in", "zoom-out"
-        ];
+        document.querySelectorAll('.nav-link').forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.getAttribute('data-target');
 
-        let i = 0;
+                // Hide all sections
+                document.querySelectorAll('.content').forEach(section => {
+                    section.classList.remove('visible');
+                });
 
-        // Change cursor every 1 second
-        setInterval(() => {
-            document.body.style.cursor = cursors[i];
-            i = (i + 1) % cursors.length; // loop back when reaching the end
-        }, 100);    
+                // Show the selected one
+                document.getElementById(targetId).classList.add('visible');
+            });
+        });
     </script>
     <header>
         <h1>Fishing :)</h1>
         <nav>
-            <a class="nav-link" data-target="section1"><span>Who</span></a>
-            <a class="nav-link" data-target="section2"><span>What</span></a>
-            <a class="nav-link" data-target="section3"><span>Where</span></a>
+            <a class="nav-link" data-target="who"><span>Who</span></a>
+                        <a class="nav-link" data-target="what"><span>What</span></a>
+            <a class="nav-link" data-target="when"><span>When</span></a>
+            <a class="nav-link" data-target="where"><span>Where</span></a>
+                        <a class="nav-link" data-target="how"><span>How</span></a>
+                                    <a class="nav-link" data-target="why"><span>Why</span></a>
+                                                <a class="nav-link" data-target="ai-prompts"><span>AI Prompts</span></a>
         </nav>
     </header>
     <main>
-        <details>
-            <summary>Who</summary>
-            <section>
-                <h2>Who:</h2>
-                <img id="fish-image" src="images/fish.gif" alt="fish">
-                <p>You and the fish</p>
-            </section>
-        </details>
-
-        <details>
-            <summary>What</summary>
-            <section>
+        <section id="who">
+            <h2>Who:</h2>
+            <img id="fish-image" src="images/fish.gif" alt="fish">
+            <p>You and the fish</p>
+            <section class="content visible">
                 <h2>What:</h2>
                 <p>Fishing is the activity of catching fish, either as a means of sustenance or for recreation. It
                     involves various methods, including angling with a rod, line, and hook, using nets or traps, or
                     spearing fish. Fishing is a prehistoric practice that provides food and employment for millions of
                     people globally and is also a popular recreational activity</p>
             </section>
-        </details>
-        <details>
-            <summary>When</summary>
-            <section>
+            <section class="content">
                 <h2>When:</h2>
                 <p>The best time for fishing is typically early morning and late evening, as fish are more active in the
                     lower light conditions of dawn and dusk. However, the ideal time can vary depending on factors like
@@ -118,10 +117,7 @@
                     productive when fish are seeking shade, and night fishing is also excellent for many species. </p>
                 <p>Personally, I like to fish whenever I so please.</p>
             </section>
-        </details>
-        <details>
-            <summary>Where</summary>
-            <section>
+            <section class="content">
                 <h2>Where: </h2>
                 <figure>
                     <img id="lake-image" src="images/image.png" alt="lake">
@@ -130,10 +126,7 @@
                         about it</h4>
                 </figure>
             </section>
-        </details>
-        <details>
-            <summary>How</summary>
-            <section>
+            <section class="content">
                 <h2>How</h2>
                 <p>To fish, first prepare your line by tying a hook, weights, and a bobber, then bait the hook. Next,
                     find a good spot, cast your line, and wait patiently for a fish to bite the bait. When you feel a
@@ -175,20 +168,14 @@
                     </li>
                 </ol>
             </section>
-        </details>
-        <details>
-            <summary>Why</summary>
-            <section>
+            <section class="content">
                 <h2>Why</h2>
                 <p>One should fish for recreation, as a healthy food source, to connect with nature, and to support
                     conservation efforts. Fishing provides physical and mental health benefits, such as stress reduction
                     and improved concentration, while also offering an opportunity to spend quality time with loved ones
                     and gain a sustainable food source rich in protein and omega-3 fatty acids. </p>
             </section>
-        </details>
-        <details>
-            <summary>AI Prompts</summary>
-            <section>
+            <section class="content">
                 <h2>AI Prompts I Used: </h2>
                 <ul>
                     <li>"What is fishing?"</li>
@@ -197,7 +184,6 @@
                     <li>"Why should one fish?"</li>
                 </ul>
             </section>
-        </details>
     </main>
     <footer>
         <a id="design-firm-link" href="../cbdesigninc.co/index.html">Design Firm Website</a>
