@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Introduction Form</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Introduction Form</h2>
+        <h3>Please submit the form below: </h3>
+        <form id="form">
+            <fieldset>
+                <legend>Basic Information:</legend>
+                <label>First Name:</label>
+                    <input type="text" name="firstName" placeholder="First Name" value="Case">
+                
+                <label>Middle Name or Initial (optional):</label>
+                    <input type="text" name="middleName" placeholder="Middle Name or Initial" value="S" data-optional="true">
+                
+                <label>Nickname/Preferred Name (optional):</label>
+                    <input type="text" name="nickname" placeholder="Nickname" value="" data-optional="true">
+                
+                <label>Last Name:</label>
+                    <input type="text" name="lastName" placeholder="Last Name" value="Buttitta">
+               
+            </fieldset>
+
+            <fieldset>
+                <legend>Acknowledgment:</legend>
+                <label>Acknowledgment Statement: </label>
+                    <input type="text" name="ackStatement" placeholder="I acknowledge that..."
+                        value="I acknowledge that the information above is accurate.">
+                <label>Acknowledgement Date:</label>
+                    <input type="date" name="ackDate" id="ackDate" value="2025-10-21">
+            </fieldset>
+
+            <fieldset>
+                <legend>Mascot Information:</legend>
+                <label>Mascot Adjective:</label>
+                    <input type="text" name="mascotAdj" placeholder="Adjective (e.g., Curious)" value="Curious">
+                <label>Mascot Animal:</label>
+                    <input type="text" name="mascotAnimal" placeholder="Animal (e.g., Bison)" value="Bison">
+                <label>Divider (e.g., ~, |, ♥️):</label>
+                    <input type="text" name="divider" placeholder="Divider symbol" value="|">
+            </fieldset>
+
+            <fieldset>
+                <legend>Picture:</legend>
+                <label>Upload Picture:</label>
+                    <input type="file" name="picture" accept="image/*">
+                <img src="images/case.jpg" alt="Default Picture"
+                    style="width:150px;margin-top:10px;border-radius:10px;">
+                <label>Picture Caption:</label>
+                    <input type="text" name="pictureCaption" placeholder="Picture caption"
+                        value="Me “borrowing” the valedictorian medal at graduation">
+            </fieldset>
+
+            <fieldset>
+                <legend>Personal Statement:</legend>
+                <textarea name="personalStatement" rows="4"
+                    placeholder="Write your personal statement here.">I am a Software Engineering student and in my Junior year at Charlotte. I like to read and be outside when I’m not on my computer. I am originally from the Raleigh area.</textarea>
+            </fieldset>
+
+            <fieldset>
+                <legend>Main Bullets:</legend>
+                <label>1. Personal Background:</label>
+                    <textarea rows="3"
+                        name="personalBackground">I was born in California and moved to North Carolina when I was little. I played baseball in high school and did volunteer work on the weekends. I originally wanted to do chemistry in college, but I decided I liked computer science more.</textarea>
+                <label>2. Professional Background:</label>
+                    <textarea rows="3"
+                        name="professionalBackground">I have sold Christmas trees, worked both front and back of house at Shake Shack, as well as front of house at Chick-fil-a. I am currently between jobs, but looking for part-time work this fall.</textarea>
+                <label>3. Academic Background:</label>
+                    <textarea rows="3"
+                        name="academicBackground">Computer Science Major, Mathematics Minor, Software Engineering Concentration, Junior</textarea>
+                <label>4. Primary Computer:</label>
+                    <textarea rows="2"
+                        name="primaryComputer">Lenovo X1 Extreme Thinkpad running Fedora Linux and Windows.</textarea>
+                <label>5. Courses I’m Taking, & Why:</label>
+
+                <div style="margin-left:20px;" id="course-container">
+                    <label>Course 1:</label>
+                        <input type="text" placeholder="Department and number (e.g., ITSC3155)" value="ITSC3155">
+                        <input type="text" placeholder="Course Name" value="Software Engineering">
+                        <input type="text" placeholder="Reason for taking course"
+                            value="Required for my concentration and field of employment.">
+
+
+                    <label>Course 2:</label>
+                        <input type="text" placeholder="Department and number (e.g., ITIS3135)" value="ITIS3135">
+                        <input type="text" placeholder="Course Name" value="Front-end Web App Development">
+                        <input type="text" placeholder="Reason for taking course"
+                            value="Computer Science degree compels me too.">
+
+
+                    <label>Course 3:</label>
+                        <input type="text" placeholder="Department and number (e.g., ITCS3112)" value="ITCS3112">
+                        <input type="text" placeholder="Course Name" value="Object Oriented Design and Implementation">
+
+                        <input type="text" placeholder="Reason for taking course"
+                            value="Concentration elective where I get to learn .NET and C#.">
+
+
+                    <label>Course 4:</label>
+                        <input type="text" placeholder="Department and number (e.g., ITSC3990)" value="ITSC3990">
+                        <input type="text" placeholder="Course Name" value="Undergraduate Research">
+                        <input type="text" placeholder="Reason for taking course" value="I find research interesting.">
+
+
+                    <label>Course 5:</label>
+                        <input type="text" placeholder="Department and number (e.g., ITSC3146)" value="ITSC3146">
+                        <input type="text" placeholder="Course Name" value="Intro to Operating Systems and Networking">
+
+                        <input type="text" placeholder="Reason for taking course"
+                            value="I find operating systems interesting and knowledge of computer systems and networking is crucial for my degree.">
+
+
+                    <label>Course 6:</label>
+                        <input type="text" placeholder="Department and number (e.g., FRE102)" value="FRE102">
+                        <input type="text" placeholder="Course Name" value="French 2">
+                        <input type="text" placeholder="Reason for taking course"
+                            value="I need extra credit hours to complete my degree and I like learning French.">
+
+                    <button type="button" onclick="createCourseBox()">Add Course</button>
+                </div>
+
+                <label>6. Funny thing (optional):</label>
+                    <input type="text" name="funnyThing" placeholder="Something funny" value="I’m blond.">
+                <label>7. Something I’d like to share (optional):</label>
+                    <input type="text" name="somethingToShare" placeholder="Something you'd like to share"
+                        value="I have a cat.">
+            </fieldset>
+
+            <fieldset>
+                <legend>Quote:</legend>
+                <label>Quote:</label>
+                    <textarea name="quote" rows="2"
+                        placeholder="Enter your favorite quote.">“The best time to plant a tree was 20 years ago. The second best time is now.”</textarea>
+                <label>Quote Author:</label>
+                    <input type="text" name="quoteAuthor" placeholder="Author" value="Chinese Proverb">
+            </fieldset>
+
+            <fieldset>
+                <legend>Links</legend>
+                <label>Link 1:</label>
+                    <input type="url" placeholder="LinkedIn URL" value="https://linkedin.com">
+                <label>Link 2:</label>
+                    <input type="url" placeholder="GitHub URL" value="https://github.com">
+                <label>Link 3:</label>
+                    <input type="url" placeholder="GitHub Pages" value="https://casebuttitta.github.io">
+                <label>Link 4:</label>
+                    <input type="url" placeholder="FreeCodeCamp" value="https://freecodecamp.org">
+                <label>Link 5:</label>
+                    <input type="url" placeholder="Codecademy" value="https://codecademy.com">
+            </fieldset>
+
+            <button type="submit">Submit</button>
+            <button type="reset" id="reset">Reset</Button>
+            <button type="button" id="clear">Clear</Button>
+        </form>
+
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+        <script src="scripts/introduction.js"></script>
+</body>
+
+</html>

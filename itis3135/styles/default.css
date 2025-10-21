@@ -1,84 +1,146 @@
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: lightyellow;
-    color: black;
-    margin: auto;
-    max-width: 800px;
-    width: 100%;
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-color: lightyellow;
+  color: black;
+  margin: auto;
+  max-width: 800px;
+  width: 100%;
 }
-h1, h2{
-    font-family: "Tahoma", Arial;
+
+h1,
+h2 {
+  font-family: "Tahoma", Arial;
 
 }
-p, li{
-    font-family: "Helvetica", Arial;
+
+p,
+li {
+  font-family: "Helvetica", Arial;
 }
-li a{
-    color: green;
-    text-decoration: none;
+
+li a {
+  color: green;
+  text-decoration: none;
 }
-a{
-    color: maroon;
-    text-decoration: none;
+
+a {
+  color: maroon;
+  text-decoration: none;
 }
-a:hover{
-    color: red;
-    text-decoration: none;
+
+a:hover {
+  color: red;
+  text-decoration: none;
 }
-a:visited{
-    color: brown;
-    text-decoration: none;
+
+a:visited {
+  color: brown;
+  text-decoration: none;
 }
-#intro-figure{
-    text-align: center;
+
+#intro-figure {
+  text-align: center;
 }
-#intro-caption{
-    font-style: italic;
+
+#intro-caption {
+  font-style: italic;
 }
-img{
- max-width: 50%;
- height: auto;  
+
+img {
+  max-width: 50%;
+  height: auto;
 }
+
 .separator-line {
   border-bottom: 2px solid #ccc;
-  margin: 20px 0 0 0px; 
+  margin: 20px 0 0 0px;
 }
 
-.outline-table {               
-  border: 1px solid #222;     
-  border-collapse: collapse;  
-  border-spacing: 0;          
+.outline-table {
+  border: 1px solid #222;
+  border-collapse: collapse;
+  border-spacing: 0;
   font-family: system-ui, Arial, sans-serif;
-  text-align: left;           
+  text-align: left;
 }
 
 .outline-table th,
 .outline-table td {
-  border: 1px solid #222; 
-  padding: 8px;           
+  border: 1px solid #222;
+  padding: 8px;
 }
 
 .outline-table thead th {
   font-weight: 600;
 }
+
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    main{
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-    }
+  main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
+
 @media only screen and (min-width: 1025px) {
-    main{
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-    }
+  main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
 }
+
 @media (min-width: 481px) {
-    main{
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-    }
+  main {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+form {
+  padding: 20px;
+  border-radius: 12px;
+  max-width: 800px;
+  margin: auto;
+}
+
+fieldset {
+  margin-bottom: 20px;
+  border: none;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+input[type="file"] {
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+button:active {
+  background-color: #3e8e41; /* Darker color on click */
 }
