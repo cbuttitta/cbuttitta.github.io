@@ -135,3 +135,4 @@ document.addEventListener("DOMContentLoaded", function () {
         container.appendChild(courseLabel);
     }
 });
+

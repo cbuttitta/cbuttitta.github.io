@@ -144,3 +144,10 @@ button {
 button:active {
   background-color: #3e8e41; /* Darker color on click */
 }
+pre{
+  padding: "12px";
+  background: "#1e1e1e";
+  color: "#dcdcdc";
+  border-radius: "8px";
+  overflow-x: "auto";
+}
