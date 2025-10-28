@@ -11,7 +11,7 @@ document.getElementById("show-json").addEventListener("click", () => {
     divider: formData.get("divider") || "",
     mascotAdjective: formData.get("mascotAdj") || "",
     mascotAnimal: formData.get("mascotAnimal") || "",
-    image: "images/case.jpg", // could be replaced with uploaded image URL if you support uploads
+    image: "images/case.jpg", 
     imageCaption: formData.get("pictureCaption") || "",
     personalStatement: formData.get("personalStatement") || "",
     personalBackground: formData.get("personalBackground") || "",
@@ -26,9 +26,9 @@ document.getElementById("show-json").addEventListener("click", () => {
 
   const courseInputs = Array.from(document.querySelectorAll("#course-container input"));
   for (let i = 0; i < courseInputs.length; i += 3) {
-    const deptNum = courseInputs[i]?.value.trim();
-    const courseName = courseInputs[i + 1]?.value.trim();
-    const reason = courseInputs[i + 2]?.value.trim();
+    const deptNum = courseInputs[i].value.trim();
+    const courseName = courseInputs[i + 1].value.trim();
+    const reason = courseInputs[i + 2].value.trim();
 
     if (deptNum && courseName) {
       let department = "";
