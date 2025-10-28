@@ -65,5 +65,6 @@ document.getElementById("show-json").addEventListener("click", () => {
   jsonDisplay.innerHTML = `<code class="language-json">${jsonString}</code>`;
 
   form.replaceWith(jsonDisplay);
-  jsonDisplay.after(backButton);
+  const codeBlock = jsonDisplay.querySelector("code");
+  hljs.highlightElement(codeBlock);
 });
