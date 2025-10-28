@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+  <title>Project Overview</title>
+</head>
+<body>
+  <header>
+    <div data-include="components/header.html"></div>
+  </header>
+  <main>
+    <h2>Application Description and Purpose</h2>
+    <p>This application is designed to help those not experienced in computer science or web development teach basic web development and computer science in a classroom setting.</p>
+
+    <h2>Intended Users</h2>
+    <p>Education professionals and their students.</p>
+
+    <h2>Website Content Overview</h2>
+    <p>The website will provide a web development learning platform for elementary to early school students, covering HTML, CSS, and JavaScript. It includes tests and practices to help solidify knowledge in an approachable way that does not require prior experience from the teacher.</p>
+
+    <h2>Client Information</h2>
+    <table>
+      <tr>
+        <td>Name</td>
+        <td>[private]</td>
+      </tr>
+      <tr>
+        <td>Organization</td>
+        <td>Reich College of Education at App State</td>
+      </tr>
+      <tr>
+        <td>Email</td>
+        <td>ca*******@appstate.edu</td>
+      </tr>
+    </table>
+
+    <h2>Wireframe and Sitemap</h2>
+    <strong>Wireframe</strong>
+    <img src="images/wireframe.png"/>
+    <br>
+    <strong>Sitemap</strong>
+    <img src="images/sitemap.png"/>
+    <h2>Pages Overview</h2>
+
+    <button class="accordion">Index.html</button>
+    <div class="panel">
+      <p><strong>Purpose:</strong> Entrance page with navbar and login modal.</p>
+      <p><strong>Audience:</strong> All users.</p>
+      <p><strong>Content:</strong> Introduction statement, navigation links, login form with validation.</p>
+      <p><strong>Actions:</strong> Navigate between pages, open login modal.</p>
+    </div>
+
+    <button class="accordion">About.html</button>
+    <div class="panel">
+      <p><strong>Purpose:</strong> About page with mission statement.</p>
+      <p><strong>Audience:</strong> All users.</p>
+      <p><strong>Content:</strong> Who, what, where, when, why of the site’s purpose.</p>
+      <p><strong>Actions:</strong> Navigate to other pages via navbar.</p>
+    </div>
+
+    <button class="accordion">Class_Rankings.html</button>
+    <div class="panel">
+      <p><strong>Purpose:</strong> Display class rankings for the student’s class.</p>
+      <p><strong>Audience:</strong> Students and education professionals.</p>
+      <p><strong>Content:</strong> Personal and class completion data, visual representations.</p>
+      <p><strong>Actions:</strong> Select metric via dropdown, display dynamic data.</p>
+    </div>
+
+    <button class="accordion">Lessons.html</button>
+    <div class="panel">
+      <p><strong>Purpose:</strong> Web development lessons and practices.</p>
+      <p><strong>Audience:</strong> Students.</p>
+      <p><strong>Content:</strong> Lessons, interactive coding practices, tests.</p>
+      <p><strong>Actions:</strong> Submit exercises, validate answers, store progress locally.</p>
+    </div>
+
+    <button class="accordion">Admin.html</button>
+    <div class="panel">
+      <p><strong>Purpose:</strong> Administrative page to view student progress.</p>
+      <p><strong>Audience:</strong> Teachers only.</p>
+      <p><strong>Content:</strong> Student progress data, search bar for student lookup.</p>
+      <p><strong>Actions:</strong> Login verification, display dynamic student data visualizations.</p>
+    </div>
+
+    <h2>Dynamic Functionality</h2>
+    <p>JavaScript will be used to implement:</p>
+    <ul>
+      <li>Modals on the introduction page.</li>
+      <li>Slideshow of images from a photo gallery.</li>
+      <li>Dropdowns and search bars on Class Rankings and Admin pages.</li>
+      <li>Loading/hiding lessons, practices, and tests on Lessons page.</li>
+    </ul>
+    <strong>Examples of websites with similar interactivity:</strong>
+    <ul>
+      <li><a href="https://www.freecodecamp.org/" target="_blank">freecodecamp.org</a></li>
+      <li><a href="https://www.w3schools.com/" target="_blank">w3schools.com</a></li>
+    </ul>
+    <br>
+    <br>
+  </main>
+<footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/HTMLInclude.min.js"></script>
+  <script>
+    const accordions = document.querySelectorAll(".accordion");
+    accordions.forEach(acc => {
+      acc.addEventListener("click", () => {
+        acc.classList.toggle("active");
+        const panel = acc.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    });
+  </script>
+</body>
+
+</html>
