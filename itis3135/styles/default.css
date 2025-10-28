@@ -146,8 +146,8 @@ button:active {
 }
 pre{
   padding: "12px";
-  background: "#1e1e1e";
-  color: "#dcdcdc";
+  background: #1e1e1e;
+  color: #dcdcdc;
   border-radius: "8px";
   overflow-x: "auto";
 }

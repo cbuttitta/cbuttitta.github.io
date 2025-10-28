@@ -62,7 +62,7 @@ document.getElementById("show-json").addEventListener("click", () => {
 
   const jsonString = JSON.stringify(data, null, 2);
   const jsonDisplay = document.createElement("pre");
-  jsonDisplay.innerHTML = `<code>${jsonString}</code>`;
+  jsonDisplay.innerHTML = `<code class="language-json">${jsonString}</code>`;
 
   form.replaceWith(jsonDisplay);
   jsonDisplay.after(backButton);
