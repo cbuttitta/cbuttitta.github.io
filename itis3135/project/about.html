@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSLearn | About</title>
+    <link rel="stylesheet" href="project.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <ul id="navbar">
+            <h2 id="logo">CSLearn</h2>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./class_rankings.html">Class Rankings</a></li>
+            <li><a href="./admin.html">Admin</a></li>
+            <li><a id="login-button">Login</a></li>
+        </ul>
+    </header>
+    <main>
+        <div class="about-section">
+  <h1>About Us</h1>
+  <p id="about-subtext">Meet the team</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img id="profile-picture" src="content/case.png" alt="Case" width="50%">
+      <div class="container">
+        <h2>Case Buttitta</h2>
+        <p class="title">CEO & Founder</p>
+        <p id="bio-text">I made this all by myself.</p>
+        <strong>cbuttitt@charlotte.edu</strong>
+        <br>
+        <br>
+      </div>
+    </div>
+  </div>
+
+  <div id="mission_container">
+    <h2>
+        Mission Statement:
+    </h2>
+    <p id="mission-text"> To make computer science education accesible to all ages and to pass on a love for computer science and web development to the next generation</p>
+  </div>
+
+    </main>
+    <div id="loginPopup" class="popup-overlay">
+  <div class="popup-content">
+    <span id="closePopup" class="close-btn">&times;</span>
+    <h2>Login</h2>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required><br><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required><br><br>
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+    <footer class="site-footer">
+  <div class="footer-container">
+    <!-- About Section -->
+    <div class="footer-section about">
+      <h3>About CSLearn</h3>
+      <p>
+        CSLearn helps elementary educators teach <strong>web development</strong> and 
+        <strong>computer science</strong> to young students through engaging lessons, interactive exercises, 
+        and classroom tracking tools.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./class_rankings.html">Class Rankings</a></li>
+        <li><a href="./admin.html">Admin</a></li>
+        <li><a href="./signup.html">Sign Up</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact -->
+    <div class="footer-section contact">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:info@cslearn.com">info@cslearn.com</a></p>
+      <p>Phone: (123) 456-7890</p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 CSLearn | Designed for elementary educators
+  </div>
+</footer>
+</body>
+<script src="project.js"></script>
+
+</html>

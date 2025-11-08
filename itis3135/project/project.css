@@ -1,0 +1,505 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+h2,
+p {
+    margin: 10px;
+}
+
+#logo {
+    color: white;
+    font-family: monospace;
+    font-size: 45px;
+}
+
+#navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0 20px;
+    background-color: #333333;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* pushes left and right apart */
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left li,
+.nav-right li {
+    margin-left: 15px; /* spacing between links */
+}
+
+#navbar li {
+    float: left;
+}
+
+#navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    background-color: #111111;
+}
+
+#login-button {
+
+    background-color: grey;
+    cursor: pointer;
+}
+
+.feature-section {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #f5f8fb;
+}
+
+.feature-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.feature-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 40px auto;
+  color: #555;
+}
+
+/* Grid layout for features */
+.features-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.feature-card img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+/* CTA Section */
+.cta-section {
+  background-color: #4e79a7;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: #f9a825;
+  color: #333;
+  font-weight: bold;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+  background-color: #f57f17;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+.mySlides {
+    display: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 35px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+    background-color: black;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+    .text {
+        font-size: 11px
+    }
+}
+
+.column {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 16px;
+    padding: 0 8px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    margin: 8px;
+}
+
+.about-section {
+    padding: 50px;
+    text-align: center;
+    background-color: #474e5d;
+    color: white;
+}
+
+#about-subtext {
+    font-size: 30px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+#profile-picture {
+    display: block;
+    margin: auto;
+}
+
+#bio-text {
+    font-size: 20px;
+}
+
+.container {
+    padding: 0 16px;
+}
+
+.container::after,
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+#mission-text {
+    font-style: italic;
+}
+
+#admin-login-container {
+    display: flex;
+    justify-content: center;
+    /* Horizontally center */
+    align-items: center;
+    /* Vertically center */
+    height: 100vh;
+    /* Make container fill the viewport height */
+}
+
+#admin-login-form {
+    background-color: rgb(156, 101, 101);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 300px;
+    /* Optional: set a max-width for the form */
+    width: 100%;
+    /* Optional: make form responsive within max-width */
+}
+
+#admin-login-form input {
+    margin-bottom: 10px;
+}
+
+#admin-body {
+    background-color: maroon;
+}
+
+.slideshow {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#rankChart {
+  width: 80%;
+  max-width: 700px;
+  height: 400px; /* <--- critical */
+}
+
+.nav-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.nav-button {
+  background-color: #4e79a7;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: #3c5e86;
+}
+
+.nav-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Popup overlay (hidden by default) */
+.popup-overlay {
+  display: none; /* hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5); /* semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Popup content box */
+.popup-content {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* Form styling */
+#loginForm input {
+  width: 90%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#loginForm button {
+  padding: 10px 20px;
+  background-color: #4e79a7;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+#loginForm button:hover {
+  background-color: #3c5e86;
+}
+
+/* Footer Styles */
+.site-footer {
+  background-color: #333333;
+  color: white;
+  padding: 40px 20px 20px 20px;
+  font-family: sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #f9a825;
+}
+
+.footer-section p, 
+.footer-section a, 
+.footer-section li {
+  font-size: 0.95rem;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+.footer-section a:hover {
+  color: #f9a825;
+}
+
+.footer-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1); /* makes white icons on dark background */
+  transition: filter 0.2s;
+}
+
+.social-icons a:hover img {
+  filter: brightness(0) invert(0.8) sepia(1) hue-rotate(30deg); /* subtle hover effect */
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  border-top: 1px solid #555;
+  padding-top: 15px;
+  color: #ccc;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 30px;
+    text-align: center;
+  }
+
+  .social-icons {
+    justify-content: center;
+  }
+}
+
