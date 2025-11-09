@@ -10,54 +10,262 @@
 </head>
 
 <body>
+    <div class="site-wrapper">
     <header>
-        <ul id="navbar">
-            <h2 id="logo">CSLearn</h2>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./class_rankings.html">Class Rankings</a></li>
-            <li><a href="./admin.html">Admin</a></li>
-        </ul>
-    </header>
-    <main>
-    </main>
-    <footer class="site-footer">
-  <div class="footer-container">
-    <!-- About Section -->
-    <div class="footer-section about">
-      <h3>About CSLearn</h3>
-      <p>
-        CSLearn helps elementary educators teach <strong>web development</strong> and 
-        <strong>computer science</strong> to young students through engaging lessons, interactive exercises, 
-        and classroom tracking tools.
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div class="footer-section links">
-      <h3>Quick Links</h3>
+  <nav id="navbar">
+    <div class="nav-left">
+      <h2 id="logo">CSLearn</h2>
       <ul>
         <li><a href="./index.html">Home</a></li>
         <li><a href="./about.html">About</a></li>
         <li><a href="./class_rankings.html">Class Rankings</a></li>
-        <li><a href="./admin.html">Admin</a></li>
-        <li><a href="./signup.html">Sign Up</a></li>
+        <li><a href="./admin.html">For Teachers</a></li>
       </ul>
     </div>
-
-    <!-- Contact -->
-    <div class="footer-section contact">
-      <h3>Contact</h3>
-      <p>Email: <a href="mailto:info@cslearn.com">info@cslearn.com</a></p>
-      <p>Phone: (123) 456-7890</p>
+    <div class="nav-right">
+      <button id="login-button">Login</button>
     </div>
-  </div>
+  </nav>
+</header>
 
-  <div class="footer-bottom">
-    &copy; 2025 CSLearn | Designed for elementary educators
-  </div>
-</footer>
+    <main>
+        <h2>HTML</h2>
 
+        <button class="accordion">DOM</button>
+        <div class="panel">
+            <details>
+                <summary>What is the DOM?</summary>
+                <p>The Document Object Model (DOM) is a structured representation of a webpage. It acts as a tree of
+                    elements, where every tag like <code>&lt;p&gt;</code>, <code>&lt;div&gt;</code>, or
+                    <code>&lt;img&gt;</code> becomes a node. JavaScript can interact with the DOM to change text,
+                    colors, and even structure without reloading the page.</p>
+            </details>
+            <details>
+                <summary>Visual Hierarchy</summary>
+                <p>Visual hierarchy refers to the way content is structured so that the most important elements stand
+                    out first. Using headings (<code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>), proper nesting,
+                    and semantic tags helps create pages that are easy to read for both users and computers.</p>
+            </details>
+            <details>
+                <summary>Leveraging the DOM With Forms and Event Listeners</summary>
+                <p>Forms allow users to input information, and event listeners detect when actions occur—like clicking a
+                    button or typing in a box. Using JavaScript, you can read values from form elements, validate input,
+                    and update the DOM to show feedback instantly.</p>
+            </details>
+        </div>
+
+        <button class="accordion">Content</button>
+        <div class="panel">
+            <details>
+                <summary>Basic HTML Elements</summary>
+                <p>Basic elements like headings, paragraphs, lists, and links form the foundation of all web pages. Tags
+                    such as <code>&lt;h1&gt;</code>, <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, and
+                    <code>&lt;a&gt;</code> organize content into readable and accessible structures.</p>
+            </details>
+            <details>
+                <summary>Audio and Visual Elements</summary>
+                <p>HTML supports multimedia with tags like <code>&lt;audio&gt;</code> and <code>&lt;video&gt;</code>.
+                    Embedding visual or audio content makes web lessons engaging and helps students better connect with
+                    the material.</p>
+            </details>
+            <details>
+                <summary>Complex HTML Structures</summary>
+                <p>As pages grow, tables, forms, and nested containers help organize content efficiently. Using
+                    <code>&lt;table&gt;</code> for data, <code>&lt;form&gt;</code> for input, and
+                    <code>&lt;section&gt;</code> for structure creates professional and well-organized pages.</p>
+            </details>
+        </div>
+
+        <button class="accordion">Best Practices</button>
+        <div class="panel">
+            <details>
+                <summary>Accessibility and Semantic HTML</summary>
+                <p>Semantic HTML uses tags that describe their purpose, such as <code>&lt;nav&gt;</code> for navigation
+                    or <code>&lt;footer&gt;</code> for footers. This improves accessibility for screen readers and helps
+                    search engines understand your content.</p>
+            </details>
+            <details>
+                <summary>Code Organization</summary>
+                <p>Keeping code tidy with proper indentation and comments makes collaboration and learning easier.
+                    Students should get into the habit of formatting HTML neatly from the start.</p>
+            </details>
+            <details>
+                <summary>Responsiveness</summary>
+                <p>Modern web pages should look good on all screen sizes. Simple practices like using relative units
+                    (<code>%</code>, <code>em</code>) and flexible layouts help pages adapt to any device.</p>
+            </details>
+        </div>
+
+        <h2>CSS</h2>
+
+        <button class="accordion">Basic Formatting</button>
+        <div class="panel">
+            <details>
+                <summary>Color and Text Styling</summary>
+                <p>CSS controls how your HTML looks. Use color properties to make content stand out and text properties
+                    like <code>font-size</code> and <code>font-family</code> to make it readable and appealing.</p>
+            </details>
+            <details>
+                <summary>Margins and Padding</summary>
+                <p>Margins create space outside elements, while padding adds space inside. Understanding these helps
+                    arrange elements without them overlapping or feeling crowded.</p>
+            </details>
+            <details>
+                <summary>Borders and Backgrounds</summary>
+                <p>Borders and background colors help separate content visually. Teachers can show students how to make
+                    interactive cards, buttons, or panels pop using simple CSS rules.</p>
+            </details>
+        </div>
+
+        <button class="accordion">Arranging Elements</button>
+        <div class="panel">
+            <details>
+                <summary>Display and Position</summary>
+                <p>The <code>display</code> property defines how elements behave — inline, block, or flex. The
+                    <code>position</code> property helps place elements precisely on the page.</p>
+            </details>
+            <details>
+                <summary>Flexbox and Grid Layout</summary>
+                <p>Modern CSS layout tools like Flexbox and Grid make it easy to align and distribute content. Educators
+                    can demonstrate how to create responsive designs using minimal code.</p>
+            </details>
+            <details>
+                <summary>Responsive Design</summary>
+                <p>Using media queries, designers can adjust layouts based on screen size. This ensures a consistent,
+                    student-friendly experience across computers and tablets.</p>
+            </details>
+        </div>
+
+        <button class="accordion">Animation</button>
+        <div class="panel">
+            <details>
+                <summary>Transitions</summary>
+                <p>Transitions let style changes happen smoothly. For example, buttons can change color gradually when
+                    hovered over, creating interactive effects that delight learners.</p>
+            </details>
+            <details>
+                <summary>Keyframe Animations</summary>
+                <p>With <code>@keyframes</code>, you can move, rotate, or fade elements. Animation brings static content
+                    to life and helps students visualize movement and interactivity.</p>
+            </details>
+            <details>
+                <summary>Practical Uses in Education</summary>
+                <p>Animations can guide attention, making it easier for students to understand cause and effect—like
+                    showing how a webpage reacts to clicks or changes over time.</p>
+            </details>
+        </div>
+
+        <h2>JavaScript</h2>
+
+        <button class="accordion">DOM Interaction</button>
+        <div class="panel">
+            <details>
+                <summary>Selecting and Changing Elements</summary>
+                <p>JavaScript can access HTML elements using methods like <code>getElementById()</code> or
+                    <code>querySelector()</code>. You can then modify text, color, or visibility in real-time.</p>
+            </details>
+            <details>
+                <summary>Handling User Input</summary>
+                <p>JavaScript listens for events such as clicks, typing, or form submissions. Teachers can create
+                    activities where students type answers and get instant feedback.</p>
+            </details>
+            <details>
+                <summary>Dynamic Page Updates</summary>
+                <p>By modifying the DOM, you can add or remove content on the fly. This makes pages interactive without
+                    reloading, a key step toward understanding app development.</p>
+            </details>
+        </div>
+
+        <button class="accordion">Logic and Data</button>
+        <div class="panel">
+            <details>
+                <summary>Variables and Data Types</summary>
+                <p>Variables store data like text, numbers, or booleans. Understanding them helps students grasp how
+                    computers remember and use information.</p>
+            </details>
+            <details>
+                <summary>Conditional Statements</summary>
+                <p>Using <code>if</code> and <code>else</code> statements, JavaScript can make decisions based on
+                    conditions. For example, showing different messages depending on a score.</p>
+            </details>
+            <details>
+                <summary>Loops and Repetition</summary>
+                <p>Loops allow code to repeat tasks automatically—great for animations or checking multiple inputs. It’s
+                    a fun way to demonstrate programming efficiency.</p>
+            </details>
+        </div>
+
+        <button class="accordion">Best Practices</button>
+        <div class="panel">
+            <details>
+                <summary>Code Readability</summary>
+                <p>Readable code is easy to maintain. Indentation, naming variables clearly, and adding comments help
+                    students and teachers understand logic more quickly.</p>
+            </details>
+            <details>
+                <summary>Debugging Basics</summary>
+                <p>Using the browser console to test code and identify errors teaches problem-solving and
+                    patience—essential skills for young programmers.</p>
+            </details>
+            <details>
+                <summary>Ethical Coding and Collaboration</summary>
+                <p>Encourage responsible coding: cite sources, respect privacy, and share ideas. Collaboration builds
+                    confidence and mirrors real-world software teamwork.</p>
+            </details>
+        </div>
+
+    </main>
+    <div id="loginPopup" class="popup-overlay" role="dialog" aria-labelledby="loginTitle" aria-modal="true">
+  <div class="popup-content">
+    <h3 id="loginTitle">Login to CS Learn</h3>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required aria-required="true">
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required aria-required="true">
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h3>About CSLearn</h3>
+                <p>
+                    CSLearn helps elementary educators teach <strong>web development</strong> and
+                    <strong>computer science</strong> to young students through engaging lessons, interactive exercises,
+                    and classroom tracking tools.
+                </p>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./class_rankings.html">Class Rankings</a></li>
+                    <li><a href="./admin.html">Admin</a></li>
+                    <li><a href="./signup.html">Sign Up</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="footer-section contact">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:info@cslearn.com">info@cslearn.com</a></p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            &copy; 2025 CSLearn | Designed for elementary educators
+        </div>
+    </footer>
+</div>
 </body>
 <script src="project.js"></script>
 

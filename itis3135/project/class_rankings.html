@@ -1,43 +1,87 @@
-    <!DOCTYPE html>
-    <html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>CSLearn | Class Rankings</title>
-        <link rel="stylesheet" href="project.css">
-        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-        <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
-    </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSLearn | Class Rankings</title>
+  <link rel="stylesheet" href="project.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
 
-    <body>
-        <header>
-            <ul id="navbar">
-                <h2 id="logo">CSLearn</h2>
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./class_rankings.html">Class Rankings</a></li>
-                <li><a href="./admin.html">Admin</a></li>
-            </ul>
-        </header>
-        <main>
-            <h1>Class Rankings by Category</h1>
+<body>
+  <div class="site-wrapper">
+  <header>
+    <nav id="navbar" aria-label="Main Navigation">
+      <div class="nav-left">
+        <h1 id="logo">CSLearn</h1>
+        <ul class="nav-menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="class_rankings.html">Class Rankings</a></li>
+          <li><a href="admin.html">For Teachers</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
 
-        <section class="slideshow">
-        <h2 id="categoryTitle"></h2>
-        <canvas id="rankChart"></canvas>
+  <main class="content">
+    <section class="slideshow">
+      <h1 id="categoryTitle" aria-live="polite">Class Rankings</h1>
 
-        <div class="nav-buttons">
-            <button class="nav-button" id="prevBtn">⬅ Previous</button>
-            <button class="nav-button" id="nextBtn">Next ➡</button>
-        </div>
-        </section>
+      <canvas id="rankChart" aria-label="Class rankings bar chart" role="img"></canvas>
 
-        </main>
-        <footer>
+      <div class="nav-buttons">
+        <button id="prevBtn" class="nav-button">Previous</button>
+        <button id="nextBtn" class="nav-button">Next</button>
+      </div>
+    </section>
 
-        </footer>
-         <script src="project.js" defer></script>   
-    </body>
+    <section class="feature-section">
+      <h2>Track Student Progress with Ease</h2>
+      <p>
+        The CSLearn Class Rankings system gives educators an at-a-glance view of student mastery in key subjects: HTML,
+        CSS, and JavaScript.
+        Navigate through categories to compare student performance and celebrate growth.
+      </p>
+    </section>
+  </main>
 
-    </html>
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h3>About CSLearn</h3>
+        <p>
+          CSLearn is dedicated to introducing young learners to computer science
+          and web development through engaging lessons and hands-on practice.
+        </p>
+      </div>
+
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./class_rankings.html">Class Rankings</a></li>
+          <li><a href="./admin.html">Admin</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h3>Contact</h3>
+        <p>Email: support@cslearn.edu</p>
+        <p>Charlotte, NC</p>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      &copy; 2025 CSLearn. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="project.js"></script>
+  </div>
+</body>
+
+</html>

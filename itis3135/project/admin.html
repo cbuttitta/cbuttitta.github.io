@@ -1,42 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSLearn | Admin</title>
-    <link rel="stylesheet" href="project.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSLearn | Admin Portal</title>
+  <link rel="stylesheet" href="project.css" />
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
-
 <body id="admin-body">
-    <header>
-        <ul id="navbar">
-            <h2 id="logo">CSLearn</h2>
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./class_rankings.html">Class Rankings</a></li>
-            <li><a href="./admin.html">Admin</a></li>
-            <li><a id="login-button">Login</a></li>
+  <div class="site-wrapper">
+  <header>
+    <nav id="navbar" aria-label="Main Navigation">
+      <div class="nav-left">
+        <h1 id="logo">CSLearn</h1>
+        <ul class="nav-menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="class_rankings.html">Class Rankings</a></li>
+          <li><a href="admin.html">For Teachers</a></li>
         </ul>
-    </header>
-    <main>
-        <div id="admin-login-container">
-            <form id="admin-login-form">
-                <h2>Admin Login</h2>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
+      </div>
+    </nav>
+  </header>
 
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password">
-                <button type="submit">Login</button>
-            </form>
-        </div>
-    </main>
-    <footer>
+  <main id="admin-login-container">
+    <div id="admin-login-header">
+    <h2>Admin Login</h2>
+    <p>Teacher login to access classroom dashboard</p>
+    </div>
+    <form id="admin-login-form" action="None">
+            <label for="first">
+                Username:
+            </label>
+            <input type="text" id="first" name="first" 
+                placeholder="Enter your Username" required>
 
-    </footer>
+            <label for="password">
+                Password:
+            </label>
+            <input type="password" id="password" name="password" 
+                placeholder="Enter your Password" required>
+
+            <div class="wrap">
+                <button type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <section class="footer-section about">
+        <h3>About CSLearn</h3>
+        <p>CSLearn helps educators teach <strong>web development</strong> and <strong>computer science</strong> to young students through interactive lessons and progress tracking.</p>
+      </section>
+
+      <nav class="footer-section links" aria-label="Footer Navigation">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="class_rankings.html">Class Rankings</a></li>
+          <li><a href="admin.html">Teacher Access</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer-section contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:info@cslearn.com">info@cslearn.com</a></p>
+        <p>Phone: (456) 456-4456</p>
+      </section>
+    </div>
+
+    <div class="footer-bottom">&copy; 2025 CSLearn | Designed for elementary educators</div>
+  </footer>
+
+  <script src="project.js"></script>
+  </div>  
 </body>
-<script src="project.js"></script>
-
 </html>

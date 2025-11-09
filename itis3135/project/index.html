@@ -1,147 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSLearn</title>
-    <link rel="stylesheet" href="project.css">
-    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CSLearn helps elementary educators teach coding and web development through fun, interactive lessons and class tools." />
+  <title>CSLearn | Teach Coding to Kids</title>
+  <link rel="stylesheet" href="project.css" />
+  <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <header>
-        <ul id="navbar">
-            <h2 id="logo">CSLearn</h2>
-            <div class="nav-left">
-                <li><a href="./index.html">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./class_rankings.html">Class Rankings</a></li>
-                <li><a href="./admin.html">Admin</a></li>
-            </div>
-            <div class="nav-right">
-                <li><a id="login-button">Login</a></li>
-            </div>
+  <div class="site-wrapper">
+  <header>
+    <nav id="navbar" aria-label="Main Navigation">
+      <div class="nav-left">
+        <h1 id="logo">CSLearn</h1>
+        <ul class="nav-menu">
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="class_rankings.html">Class Rankings</a></li>
+          <li><a href="admin.html">For Teachers</a></li>
         </ul>
+      </div>
+      <div class="nav-right">
+        <button id="login-button" aria-haspopup="dialog">Login</button>
+      </div>
+    </nav>
+  </header>
 
-    </header>
-    <main>
-
-
-
-
-
-        <div class="slideshow-container">
-
-            <div class="mySlides fade">
-                <div class="numbertext">1 / 4</div>
-                <img src="content/slideshow_code.png" style="width:100%">
-                <div class="text">Master Coding</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">2 / 4</div>
-                <img src="content/slideshow_children.png" style="width:100%">
-                <div class="text">Web Development for Elementary Schoolers</div>
-            </div>
-
-            <div class="mySlides fade">
-                <div class="numbertext">3 / 4</div>
-                <img src="content/slideshow_question.png" style="width:100%">
-                <div class="text">Comprehensive Quizzes</div>
-            </div>
-            <div class="mySlides fade">
-                <div class="numbertext">4 / 4</div>
-                <img src="content/slideshow_rankings.png" style="width:100%">
-                <div class="text">Competitive class performance</div>
-            </div>
-
-        </div>
-        <br>
-        <section class="feature-section">
-            <h2>Empower Your Students with Coding</h2>
-            <p>
-                CSLearn gives elementary school teachers the tools and confidence to teach <strong>web
-                    development</strong>
-                and <strong>basic computer science</strong> concepts in a fun, engaging, and age-appropriate way.
-            </p>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <h3>Ready-Made Lesson Plans</h3>
-                    <p>Step-by-step activities designed for kids, making coding simple and enjoyable.</p>
-                </div>
-                <div class="feature-card">
-
-                    <h3>Interactive Lessons</h3>
-                    <p>Hands-on exercises, games, and quizzes to keep students engaged and motivated.</p>
-                </div>
-                <div class="feature-card">
-
-                    <h3>Track Student Progress</h3>
-                    <p>Monitor your students’ learning journey and celebrate their achievements.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Section: Call to Action -->
-        <section class="cta-section">
-            <h2>Start Your Free Trial Today!</h2>
-            <p>
-                Join hundreds of elementary educators bringing coding to the classroom.
-                CSLearn is easy to set up, fully online, and designed for students as young as 7.
-            </p>
-            <a href="./signup.html" class="cta-button">Get Started</a>
-        </section>
-    </main>
-    <div id="loginPopup" class="popup-overlay">
-        <div class="popup-content">
-            <span id="closePopup" class="close-btn">&times;</span>
-            <h2>Login</h2>
-            <form id="loginForm">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required><br><br>
-                <button type="submit">Login</button>
-            </form>
-        </div>
+  <main>
+    <!-- Slideshow -->
+     <div id="slideshow-container">
+  <section id="slideshow" aria-label="Site Highlights">
+    <div class="slide fade">
+      <img src="content/slideshow_code.png" alt="Code editor screenshot" />
+      <div class="slide-text">Master Coding</div>
     </div>
-    <footer class="site-footer">
-        <div class="footer-container">
-            <!-- About Section -->
-            <div class="footer-section about">
-                <h3>About CSLearn</h3>
-                <p>
-                    CSLearn helps elementary educators teach <strong>web development</strong> and
-                    <strong>computer science</strong> to young students through engaging lessons, interactive exercises,
-                    and classroom tracking tools.
-                </p>
-            </div>
+    <div class="slide fade">
+      <img src="content/slideshow_children.png" alt="Students learning coding" />
+      <div class="slide-text">Web Development for Elementary Schoolers</div>
+    </div>
+    <div class="slide fade">
+      <img src="content/slideshow_question.png" alt="Question mark illustration" />
+      <div class="slide-text">Comprehensive Quizzes</div>
+    </div>
+    <div class="slide fade">
+      <img src="content/slideshow_rankings.png" alt="Graph showing performance" />
+      <div class="slide-text">Competitive Class Performance</div>
+    </div>
+  </section>
+</div>
 
-            <!-- Quick Links -->
-            <div class="footer-section links">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="./index.html">Home</a></li>
-                    <li><a href="./about.html">About</a></li>
-                    <li><a href="./class_rankings.html">Class Rankings</a></li>
-                    <li><a href="./admin.html">Teacher Access</a></li>
-                </ul>
-            </div>
+    <!-- Features -->
+    <section class="feature-section">
+      <h2>Empower Students to Code</h2>
+      <p>CSLearn offers interactive lessons, quizzes, and real-time class tracking tools to make coding fun and accessible for young learners.</p>
 
-            <!-- Contact -->
-            <div class="footer-section contact">
-                <h3>Contact</h3>
-                <p>Email: <a href="mailto:info@cslearn.com">info@cslearn.com</a></p>
-                <p>Phone: (456) 456-4456</p>
-            </div>
-        </div>
+      <div class="features-grid">
+        <article class="feature-card">
+          <h3>Interactive Lessons</h3>
+          <p>Step-by-step coding challenges designed for students ages 7–12 to build real-world skills.</p>
+        </article>
 
-        <div class="footer-bottom">
-            &copy; 2025 CSLearn | Designed for elementary educators
-        </div>
-    </footer>
+        <article class="feature-card">
+          <h3>Teacher Dashboard</h3>
+          <p>Monitor progress and manage your classroom’s coding success in one easy interface.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+      <h2>Start Your Free Trial Today!</h2>
+      <p>Join hundreds of elementary educators introducing coding through CSLearn — interactive, engaging, and classroom-ready.</p>
+      <a href="signup.html" class="cta-button">Get Started</a>
+    </section>
+  </main>
+
+  <!-- Login Popup -->
+  <div id="loginPopup" class="popup-overlay" role="dialog" aria-labelledby="loginTitle" aria-modal="true">
+    <div class="popup-content">
+        <button id="closePopup" aria-label="Close Login Popup">X</button>
+      <h3 id="loginTitle">Login to CSLearn</h3>
+      <form id="loginForm">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required aria-required="true" />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required aria-required="true" />
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-container">
+      <section class="footer-section about">
+        <h3>About CSLearn</h3>
+        <p>CSLearn helps educators teach <strong>web development</strong> and <strong>computer science</strong> to young students through interactive lessons and progress tracking.</p>
+      </section>
+
+      <nav class="footer-section links" aria-label="Footer Navigation">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="class_rankings.html">Class Rankings</a></li>
+          <li><a href="admin.html">Teacher Access</a></li>
+        </ul>
+      </nav>
+
+      <section class="footer-section contact">
+        <h3>Contact</h3>
+        <p>Email: <a href="mailto:info@cslearn.com">info@cslearn.com</a></p>
+        <p>Phone: (456) 456-4456</p>
+      </section>
+    </div>
+
+    <div class="footer-bottom">&copy; 2025 CSLearn | Designed for elementary educators</div>
+  </footer>
+
+  <script src="project.js" defer></script>
+  </div>  
 </body>
-<script src="project.js"></script>
-
 </html>
