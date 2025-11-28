@@ -1,5 +1,4 @@
-
-
+let dark = false;
 
 if (window.location.pathname.includes('lessons.html')) {
   const acc = document.getElementsByClassName("accordion");
@@ -154,3 +153,19 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 }
+
+//dark mode
+function darkMode(){
+  console.log("dark mode");
+  var r = document.querySelector(':root');
+  if(!dark){r.style.setProperty('--bg', '#5e677bff'); dark=true;}
+  else{r.style.setProperty('--bg', '#f5f8fb'); dark=false;}
+}
+document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("keydown", (event) => {
+    if (event.altKey && event.key === 'n') {
+      event.preventDefault();
+      darkMode();
+    }
+  });
+});
